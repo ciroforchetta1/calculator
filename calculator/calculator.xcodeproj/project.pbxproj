@@ -15,6 +15,10 @@
 		1AABB23729268CFE00DE40B0 /* Digit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB23629268CFE00DE40B0 /* Digit.swift */; };
 		1AABB23929268D2500DE40B0 /* ArithmeticOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB23829268D2500DE40B0 /* ArithmeticOperation.swift */; };
 		1AABB23B29269AF500DE40B0 /* CalculatorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB23A29269AF500DE40B0 /* CalculatorButtonStyle.swift */; };
+		1AABB23E2927DEAC00DE40B0 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB23D2927DEAC00DE40B0 /* CalculatorButton.swift */; };
+		1AABB2432927E3A800DE40B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB2422927E3A800DE40B0 /* Constants.swift */; };
+		1AABB245292AB30E00DE40B0 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB244292AB30E00DE40B0 /* Calculator.swift */; };
+		1AABB247292AB3B800DE40B0 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB246292AB3B800DE40B0 /* CalculatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		1AABB23629268CFE00DE40B0 /* Digit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digit.swift; sourceTree = "<group>"; };
 		1AABB23829268D2500DE40B0 /* ArithmeticOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticOperation.swift; sourceTree = "<group>"; };
 		1AABB23A29269AF500DE40B0 /* CalculatorButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonStyle.swift; sourceTree = "<group>"; };
+		1AABB23D2927DEAC00DE40B0 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
+		1AABB2422927E3A800DE40B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1AABB244292AB30E00DE40B0 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		1AABB246292AB3B800DE40B0 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 		1AABB2212925296600DE40B0 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				1AABB2422927E3A800DE40B0 /* Constants.swift */,
 				1AABB2222925296600DE40B0 /* calculatorApp.swift */,
 				1AABB23229268ADD00DE40B0 /* View */,
 				1AABB2262925296800DE40B0 /* Assets.xcassets */,
@@ -78,7 +87,9 @@
 		1AABB23229268ADD00DE40B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1AABB23F2927DF1500DE40B0 /* Components */,
 				1AABB2302925472600DE40B0 /*  CalculatorView.swift */,
+				1AABB23D2927DEAC00DE40B0 /* CalculatorButton.swift */,
 				1AABB23C29269B0600DE40B0 /* Styles */,
 				1AABB23529268C9500DE40B0 /* Models */,
 			);
@@ -91,6 +102,7 @@
 				1AABB23329268C6500DE40B0 /* ButtonType.swift */,
 				1AABB23629268CFE00DE40B0 /* Digit.swift */,
 				1AABB23829268D2500DE40B0 /* ArithmeticOperation.swift */,
+				1AABB244292AB30E00DE40B0 /* Calculator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,6 +113,14 @@
 				1AABB23A29269AF500DE40B0 /* CalculatorButtonStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		1AABB23F2927DF1500DE40B0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1AABB246292AB3B800DE40B0 /* CalculatorViewModel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,11 +194,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AABB23929268D2500DE40B0 /* ArithmeticOperation.swift in Sources */,
+				1AABB23E2927DEAC00DE40B0 /* CalculatorButton.swift in Sources */,
 				1AABB2312925472600DE40B0 /*  CalculatorView.swift in Sources */,
 				1AABB23429268C6500DE40B0 /* ButtonType.swift in Sources */,
+				1AABB247292AB3B800DE40B0 /* CalculatorViewModel.swift in Sources */,
 				1AABB23B29269AF500DE40B0 /* CalculatorButtonStyle.swift in Sources */,
+				1AABB245292AB30E00DE40B0 /* Calculator.swift in Sources */,
 				1AABB2232925296600DE40B0 /* calculatorApp.swift in Sources */,
 				1AABB23729268CFE00DE40B0 /* Digit.swift in Sources */,
+				1AABB2432927E3A800DE40B0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +339,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +369,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

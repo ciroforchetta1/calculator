@@ -12,6 +12,8 @@ struct calculatorApp: App {
     var body: some Scene {
         WindowGroup {
            _CalculatorView()
+                .environmentObject(_CalculatorView.ViewModel())
+            
         }
     }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct _CalculatorView: View {
+    @EnvironmentObject private var viewModel: ViewModel
+
     var buttonTypes: [[ButtonType]] {
             [[.allClear, .negative, .percent, .operation(.division)],
              [.digit(.seven), .digit(.eight), .digit(.nine), .operation(.multiplication)],
@@ -22,21 +24,26 @@ struct _CalculatorView: View {
                            displayText
                            buttonPad
             }
-            .background(Color.black)
+            .padding(Constants.padding)
+                .background(Color.black)
         }
     }
 
 struct _CalculatorView_Previews: PreviewProvider {
+    
+    
     static var previews: some View {
         _CalculatorView()
+    
     }
 }
 //i create an extension to make everything a little clearer.
 
 extension _CalculatorView {
     
+    
     private var displayText: some View {
-        Text("0")
+        Text(viewModel.displayText)
             .padding()
             .foregroundColor(.white)
             .frame(maxWidth: .infinity, alignment: .trailing)
@@ -46,17 +53,15 @@ extension _CalculatorView {
     }
     
     private var buttonPad: some View {
-        ForEach(buttonTypes, id: \.self) { row in
-                    HStack {
-                        ForEach(row, id: \.self) { buttonType in
-                            Button(buttonType.description) { }
-                                .buttonStyle(CalculatorButtonStyle(
-                                    size: 80,
-                                    backgroundColor: buttonType.backgroundColor,
-                                    foregroundColor: buttonType.foregroundColor)
-                                )
-                }
-            }
-        }
+           VStack (spacing: Constants.padding) {
+               ForEach(buttonTypes, id: \.self) { row in
+                   HStack {
+                       ForEach(row, id: \.self) { buttonType in
+                           CalculatorButton(buttonType: buttonType)
+                               
+                       }
+                   }
+               }
+           }
+       }
     }
-}

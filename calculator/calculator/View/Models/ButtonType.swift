@@ -42,7 +42,7 @@ enum ButtonType: Hashable, CustomStringConvertible { //This protocol will let us
     var backgroundColor: Color {
             switch self {
             case .allClear, .clear, .negative, .percent:
-                return Color(.lightGray)
+                return Color(.lightGray) //lightGray
             case .operation, .equals:
                 return .orange
             case .digit, .decimal:
